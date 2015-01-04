@@ -12,10 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let StripePublishableKey = "pk_test_your_keys"
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+            Stripe.setDefaultPublishableKey(StripePublishableKey)
+
         return true
     }
 
